@@ -7,6 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## about this repo 
+First, English isn't my first language, so, sorry for any grammar errors. 
+I made this repo because I didn't found any solution to my problems and solved some of them using the configs that are here.
+Second thing, is that I'm using [Sail](https://laravel.com/docs/9.x/sail) to make a development environment and using [jenssegers/mongodb]( https://github.com/mongodb/laravel-mongodb) to connect to MongoDB. So, both Mongodb and Mariadb databases are configurated. 
+Third, is that I use WSL-2 with the Ubuntu22.04 distribution.  
+
+Also, I'm using Laravel 9 because (at the moment) is the last version of laravel that jessengers is supported. 
+
+Personal tip, make sure that you don't have any mongodb 
+## Recommendations
+1. Have php installed in Linux. There's a [script](https://github.com/LMedina1/laravel-mongo-db/blob/main/install-php.sh) to install php, 
+2. Have Composer installed in your enviromnet. There's a [script](https://github.com/LMedina1/laravel-mongo-db/blob/main/install-composer.sh) to install Composer, it will allow you to install this project. 
+3. When running "composer install" run with "--ignore-platform-reqs", to install Jessengers too. 
+4. Have Docker Installed. Theres a [script](https://github.com/LMedina1/laravel-mongo-db/blob/main/install-docker.sh) too. but you can find it on your documentation. 
+
+Once you have your enviroment ready, you must run: 
+ - ./vendor/bin/sail build --no-cache
+ - ./vendor/bin/sail up -d 
+
+If it has any error when running the app related to storage folder, run:
+chmod 775 -R ./storage/*
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -64,3 +87,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
