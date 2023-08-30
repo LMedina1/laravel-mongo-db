@@ -15,7 +15,8 @@ Third, is that I use WSL-2 with the Ubuntu22.04 distribution.
 
 Also, I'm using Laravel 9 because (at the moment) is the last version of laravel that jessengers is supported. 
 
-Personal tip, make sure that you don't have any mongodb 
+Personal tip, make sure that you don't have any mongodb service if you are trying to connect on your container, it will show an error like 
+"Authentication Failed" or something like that. 
 ## Recommendations
 1. Have php installed in Linux. There's a [script](https://github.com/LMedina1/laravel-mongo-db/blob/main/install-php.sh) to install php, 
 2. Have Composer installed in your enviromnet. There's a [script](https://github.com/LMedina1/laravel-mongo-db/blob/main/install-composer.sh) to install Composer, it will allow you to install this project. 
